@@ -6,7 +6,7 @@ const findLongestVowel = (str) => {
 const findLongestWord = (sentence) => {
   const words = sentence
     .toLowerCase()
-    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()"]/g, "")
     .split(" ");
   let longestWord = words[0];
   let longestWordVoWels = findLongestVowel(longestWord);
@@ -25,12 +25,12 @@ const findLongestWord = (sentence) => {
   return longestWord;
 };
 
-// Test alternatives
-test1 = "me you they"; // they
+// Test inputs
+test1 = "me you they"; // they -> the longest word.
 test2 =
-  "Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers” (Socrates)"; // experience
+  '"Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers" (Socrates)"'; // experience -> cleaning punctuation & counting vowels.
 
-test3 = "good bad evil"; // good //Same length and vowers -> previous one wins!
+test3 = "good bad evil"; // good // Same length and vowels -> what will be?
 
-let longestWord = findLongestWord(test3);
+let longestWord = findLongestWord(test2);
 console.log(longestWord);
