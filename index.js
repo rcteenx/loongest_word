@@ -25,7 +25,11 @@ const findLongestWord = (sentence) => {
   return longestWord;
 };
 
-let longestWord = findLongestWord(
-  "“Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers” (Socrates)"
-);
+// Test alternatives
+test1 = "me you they"; // they
+test2 = "good bad evil"; // good
+test3 =
+  "Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers” (Socrates)"; // experience
+
+let longestWord = findLongestWord(test3);
 console.log(longestWord);
