@@ -27,9 +27,10 @@ const findLongestWord = (sentence) => {
 
 // Test alternatives
 test1 = "me you they"; // they
-test2 = "good bad evil"; // good
-test3 =
+test2 =
   "Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers” (Socrates)"; // experience
+
+test3 = "good bad evil"; // good //Same length and vowers -> previous one wins!
 
 let longestWord = findLongestWord(test3);
 console.log(longestWord);
